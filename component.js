@@ -41,6 +41,7 @@ function getPageInfo() {
   export default{
       name: 'portalApps',
       data () {
+          var _this = this
           return {
               userId : '11223344',
               servicesInfo : {
@@ -280,7 +281,7 @@ function getPageInfo() {
           openApp(item){
               console.log(item.openUrl)
               if(item.disappear){
-                  this.$router.push({
+                  _this.$router.push({
                       path : '/appStoreDetail',
                       query : {
                           appInfoId : item.appInfoId,
@@ -305,7 +306,7 @@ function getPageInfo() {
               common.openApp(item.openUrl , item.appFromCode == "1" ? 1 : -1)
           },
           toApps(path){
-              this.$router.replace({
+              _this.$router.replace({
                   path : path
               })
           },
