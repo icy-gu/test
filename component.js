@@ -1,15 +1,18 @@
 function getPageInfo(){
-    let url = constGlobal.HostAppPageCustomize + 'getMobileCustomizePageInfo';
-    let params = {
-        pageInfoId : 'd8d528a53e024cb88fd0baaacf51b77b'
-    }
-    http.apiPost( url , params ).then( res=>{
-        if( res.status == 0 ){
-            return res.data
-        }else{
-            common.toastMsg(res.message)
+    let p = new Promise( function (resolve,reject){
+        let url = constGlobal.HostAppPageCustomize + 'getMobileCustomizePageInfo';
+        let params = {
+            pageInfoId : 'd8d528a53e024cb88fd0baaacf51b77b'
         }
+        http.apiPost( url , params ).then( res=>{
+            if( res.status == 0 ){
+                resolve(res.data)
+            }else{
+                common.toastMsg(res.message)
+            }
+        })
     })
+    return p
 }
 function loadComponent(){ 
 
