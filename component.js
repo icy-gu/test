@@ -222,5 +222,6 @@ function loadComponent(){
     console.log( component ,'//////////////')
     return component
 }
+loadComponent()
 
 // export default component
