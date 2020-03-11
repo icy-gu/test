@@ -1,5 +1,6 @@
 function loadComponent(){ 
-    var portalHeader = `{<template><div class="portalHeader  flex flex-justify-content-between flex-align-items" style="height:44px;">
+
+    var portalHeader = `<template><div class="portalHeader  flex flex-justify-content-between flex-align-items" style="height:44px;">
                 <div class="todayInfo" style="height:30px;">
                     <img src="http://jy-admin.jieyundata.com:18026/group1/M00/00/37/wKhkP13fXkaAdw5yAAUHXO3vUrQ770.png" alt="" style="height:100%">
                 </div>
@@ -116,8 +117,8 @@ function loadComponent(){
         .fixPortalHeader2 .vux-1px:before {
             border: 1px solid #e6e6e6;
             border-radius: 30px;
-        }</style>}`;
-        var swiperContainer = `{<template><div class="swiperContainer" v-if="swiperList.length > 0 && topNews.length > 0">
+        }</style>`;
+    var swiperContainer = `<template><div class="swiperContainer" v-if="swiperList.length > 0 && topNews.length > 0">
            <swiper-plugin loop auto :aspect-ratio="150/345" dots-position="center" style="width:100%;">
                  <swiper-item-plugin 
                     class="swiper-demo-img portalSwiperTopItem flex flex-align-items" 
@@ -319,8 +320,8 @@ function loadComponent(){
     }
     .swiperContainer .vux-slider .vux-indicator.vux-indicator-center a .active {
       background: #fff;
-    }</style>}`;
-    var portalApps = `{<template><div class="portalApps" style="overflow:hidden;box-sizing: border-box;">
+    }</style>`;
+    var portalApps = `<template><div class="portalApps" style="overflow:hidden;box-sizing: border-box;">
             <div class="block" 
                 v-for="(item , index) in mineFrequentAppList" 
                 :key="index" 
@@ -661,7 +662,7 @@ function loadComponent(){
       color: #181818;
       margin-top: 10px;
       line-height: 17px;
-    }</style>}`;
+    }</style>`;
     var component = {portalHeader: portalHeader,swiperContainer: swiperContainer,portalApps: portalApps};
     return component 
     }
