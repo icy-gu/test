@@ -304,7 +304,7 @@ function getPageInfo() {
               /* 打开应用 */
               common.openApp(item.openUrl , item.appFromCode == "1" ? 1 : -1)
           },
-          toApps(path){
+          toApps:function(path){
               this.$router.replace({
                   path : path
               })
