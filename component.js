@@ -219,9 +219,9 @@ function loadComponent(){
     var component = {
         portalSwiperContainerComponent: portalSwiperContainerComponent
     }
-    console.log( component ,'//////////////')
+    // console.log( component ,'//////////////')
     return component
 }
-loadComponent()
+// loadComponent()
 
 // export default component
