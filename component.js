@@ -219,6 +219,7 @@ function loadComponent(){
     var component = {
         portalSwiperContainerComponent: portalSwiperContainerComponent
     }
+    console.log( component ,'//////////////')
     return component
 }
 
