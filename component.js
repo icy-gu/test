@@ -305,8 +305,7 @@ function getPageInfo() {
               common.openApp(item.openUrl , item.appFromCode == "1" ? 1 : -1)
           },
           toApps(path){
-              var _this = this;
-              _this.$router.replace({
+              this.$router.replace({
                   path : path
               })
           },
